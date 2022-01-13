@@ -105,7 +105,7 @@ We'll be creating a Glue Job and a Glue Crawler
    | --co2_input_path | s3://awesome-project-awesome-module/data-source/EmissionsByCountry.csv |
    | --co2_output_path | s3://awesome-project-awesome-module/data-ingestion/EmissionsByCountry.parquet |
 
-          ![glue-job-parameters-ingestion.png](./assets/glue-job-parameters-ingestion.png)
+   ![glue-job-parameters-ingestion.png](./assets/glue-job-parameters-ingestion.png)
 5. Click **Next** and **Save job and edit script** and **Save Job**
     ![save-glue-job.png](./assets/save-glue-job.png)
 
