@@ -1,20 +1,6 @@
-module "glue-job-ingestion" {
-  source = "github.com/data-derp/terraform-modules//glue-job"
+provider "aws" {}
 
-  project-name = var.project-name
-  module-name = var.module-name
-  submodule-name = "data-ingestion"
-  script-path = "data-ingestion-artifacts/main.py"
-  additional-params = {
-    "--extra-py-files":                   "s3://${var.project-name}-${var.module-name}/data-ingestion-artifacts/data_ingestion-0.1-py3.egg", # https://docs.aws.amazon.com/glue/latest/dg/reduced-start-times-spark-etl-jobs.html
-    "--temperatures_country_input_path":  "s3://${var.project-name}-${var.module-name}/data-source/TemperaturesByCountry.csv",
-    "--temperatures_country_output_path": "s3://${var.project-name}-${var.module-name}/data-ingestion/TemperaturesByCountry.parquet",
-    "--temperatures_global_input_path":   "s3://${var.project-name}-${var.module-name}/data-source/GlobalTemperatures.csv",
-    "--temperatures_global_output_path":  "s3://${var.project-name}-${var.module-name}/data-ingestion/GlobalTemperatures.parquet",
-    "--co2_input_path":                   "s3://${var.project-name}-${var.module-name}/data-source/EmissionsByCountry.csv",
-    "--co2_output_path":                  "s3://${var.project-name}-${var.module-name}/data-ingestion/EmissionsByCountry.parquet",
-  }
-}
+data "aws_caller_identity" "current" {}
 
 module "glue-job-transformation" {
   source = "github.com/data-derp/terraform-modules//glue-job"
@@ -35,11 +21,4 @@ module "glue-job-transformation" {
     "--europe_big_3_co2_output_path":         "s3://${var.project-name}-${var.module-name}/data-transformation/EuropeBigThreeEmissions.parquet/",
     "--co2_oceania_output_path":              "s3://${var.project-name}-${var.module-name}/data-transformation/OceaniaEmissionsEdited.parquet/",
   }
-}
-
-module "data-workflow" {
-  source = "github.com/data-derp/terraform-modules//glue-workflow"
-
-  project-name = var.project-name
-  module-name = var.module-name
 }

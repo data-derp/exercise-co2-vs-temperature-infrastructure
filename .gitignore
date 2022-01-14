@@ -2,6 +2,6 @@
 .DS_Store
 inputs/data-source
 .terraform
-.terraform.tfstate
-.terraform.tfstate.backup
+terraform.tfstate
+terraform.tfstate.backup
 .terraform.lock.hcl

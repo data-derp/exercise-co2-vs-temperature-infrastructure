@@ -31,22 +31,4 @@ If you don't have the artifacts
     ./go upload-artifacts "${PROJECT_NAME}-${MODULE_NAME}"
     ```
 
-## Infrastructure as Code
-Sometimes clicking through the UI is challenging and prone to mistakes. Use Terraform and custom modules to apply the same changes!
-1. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
-2. [Install Terraform](https://www.terraform.io/downloads) - required version 1.1.3
-   ```bash
-   cd iac
-   
-   # Change these variables
-   export PROJECT_NAME=awesome-project
-   export MODULE_NAME=awesome-module
-   
-   terraform init && terraform apply -var "project-name=${PROJECT_NAME}" -var "module-name=${MODULE_NAME} -auto-approve
-   ```
-3. Run the Workflow in the AWS Console and watch it pass
-4. Destroy it
-   ```bash
-   cd iac
-   terraform destroy -auto-approve
    ```
