@@ -18,6 +18,7 @@ Where these are used, you'll want to pick your own unique `project-name` and `mo
 2. Create AWS Resources for [Data Ingestion](./data-ingestion.md)
 3. Create AWS Resources for [Data Transformation](./data-transformation.md)
 4. Create AWS Resources for [Data Workflow](./data-workflow.md)
+5. Create AWS Resources via [Infrastructure as Code](./infrastucture-as-code.md)
 
 ## Fresh Start
 If you don't have the artifacts
