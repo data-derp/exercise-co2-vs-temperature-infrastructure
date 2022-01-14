@@ -11,7 +11,7 @@ Where these are used, you'll want to pick your own unique `project-name` and `mo
 
 ## Prerequisites
 * An AWS Account and IAM User with permissions to create AWS Glue and Athena resources and read S3 buckets
-* AWS CLI access
+* [AWS CLI access](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html))
 
 ## Quickstart
 1. If you don't already have artifacts for Data Ingestion and Transformation in your S3 bucket follow the [Fresh Start instructions](#fresh-start)
@@ -23,13 +23,12 @@ Where these are used, you'll want to pick your own unique `project-name` and `mo
 ## Fresh Start
 If you don't have the artifacts
 1. [Create an S3 bucket](https://github.com/data-derp/s3-bucket-aws-cloudformation)
-2. Upload the artifacts ([ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html))
-    ```bash
-    # Change these variables
-    PROJECT_NAME=awesome-project
-    MODULE_NAME=awesome-module
-   
-    ./go upload-artifacts "${PROJECT_NAME}-${MODULE_NAME}"
-    ```
+2. [Ensure you have an active AWS CLI Session in your Terminal](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html))
+3. Upload the artifacts:
+```bash
+# Change these variables
+PROJECT_NAME=awesome-project
+MODULE_NAME=awesome-module
 
-   ```
+./go upload-artifacts "${PROJECT_NAME}-${MODULE_NAME}"
+```
