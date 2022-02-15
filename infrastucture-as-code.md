@@ -8,8 +8,20 @@ Sometimes clicking through the UI is challenging and prone to mistakes. Use Terr
 5. [Destroy everything](#destroy-everything)
 
 ## Setup
-1. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
-2. [Install Terraform](https://www.terraform.io/downloads) - required version 1.1.3
+1. [Install dependencies](#install-depdenencies)
+2. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+
+
+### Install Depdenencies
+#### Non-Containerised
+1. Install Python (version 3.7), for example with [Pyenv](https://github.com/pyenv/pyenv)
+2. [Install Terraform](https://www.terraform.io/downloads) (required version 1.1.3)
+
+#### Containerised
+```bash
+docker run -it -v $(pwd):/app ghcr.io/data-derp/python-aws-terraform-container:master bash
+````
+All workloads can be run within this container once you have [set up an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
 ## Data Ingestion IAC
 ```bash
@@ -18,6 +30,7 @@ cd iac/data-ingestion
 # Change these variables
 export PROJECT_NAME=awesome-project
 export MODULE_NAME=awesome-module
+export AWS_DEFAULT_REGION=eu-central-1
 
 terraform init && terraform apply -var "project-name=${PROJECT_NAME}" -var "module-name=${MODULE_NAME}" -auto-approve
 ```
