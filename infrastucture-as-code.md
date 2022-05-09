@@ -12,7 +12,7 @@ Sometimes clicking through the UI is challenging and prone to mistakes. Use Terr
 2. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
 
-### Install Depdenencies
+### Install Depenencies
 #### Non-Containerised
 1. Install Python (version 3.7), for example with [Pyenv](https://github.com/pyenv/pyenv)
 2. [Install Terraform](https://www.terraform.io/downloads) (required version 1.1.3)
