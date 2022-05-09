@@ -8,9 +8,9 @@ module "glue-job-ingestion" {
   project-name = var.project-name
   module-name = var.module-name
   submodule-name = "data-ingestion"
-  script-path = "data-ingestion-artifacts/main.py"
+  script-path = "data-ingestion/main.py"
   additional-params = {
-    "--extra-py-files":                   "s3://${var.project-name}-${var.module-name}/data-ingestion-artifacts/data_ingestion-0.1-py3.egg", # https://docs.aws.amazon.com/glue/latest/dg/reduced-start-times-spark-etl-jobs.html
+    "--extra-py-files":                   "s3://${var.project-name}-${var.module-name}/data-ingestion/data_ingestion-0.1-py3.egg", # https://docs.aws.amazon.com/glue/latest/dg/reduced-start-times-spark-etl-jobs.html
     "--temperatures_country_input_path":  "s3://${var.project-name}-${var.module-name}/data-source/TemperaturesByCountry.csv",
     "--temperatures_country_output_path": "s3://${var.project-name}-${var.module-name}/data-ingestion/TemperaturesByCountry.parquet",
     "--temperatures_global_input_path":   "s3://${var.project-name}-${var.module-name}/data-source/GlobalTemperatures.csv",

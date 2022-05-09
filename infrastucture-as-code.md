@@ -68,7 +68,7 @@ export AWS_DEFAULT_REGION=eu-central-1
 for p in data-workflow data-transformation data-ingestion
 do
  pushd "./iac/${p}" > /dev/null
-    terraform destroy -auto-approve
+    terraform destroy -var "project-name=${PROJECT_NAME}" -var "module-name=${MODULE_NAME}" -auto-approve
  popd > /dev/null
 done
 ```
