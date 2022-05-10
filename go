@@ -26,8 +26,8 @@ goal_upload-artifacts() {
       exit 1
     fi
 
-   aws s3 cp ${script_dir}/inputs/data-ingestion/ s3://${bucket_name}/data-ingestion-artifacts/ --recursive
-   aws s3 cp ${script_dir}/inputs/data-transformation/ s3://${bucket_name}/data-transformation-artifacts/ --recursive
+   aws s3 cp ${script_dir}/inputs/data-ingestion/ s3://${bucket_name}/data-ingestion/ --recursive
+   aws s3 cp ${script_dir}/inputs/data-transformation/ s3://${bucket_name}/data-transformation/ --recursive
 }
 
 TARGET=${1:-}

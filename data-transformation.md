@@ -1,7 +1,7 @@
 # Exercise: Data Transformation on AWS
-In this exercise, we'll be creating a second AWS Glue Job to run our Transformation Spark job and a second AWS Crawler. Please be sure to run the [Exercise on Data Ingestion](./data-ingestion.md)
+In this exercise, we'll be creating a second AWS Glue Job to run our Transformation Spark job and a second AWS Crawler. Please be sure to first run the [Exercise on Data Ingestion](./data-ingestion.md)
 
-**NOTE:** In the following, anywhere `awesome-project-awesome-module` are used (project-name: awesome-project, module-name=awesome-module) should be replaced with your own unique name. This name must match the name of the S3 bucket that was previously created in the [previous exercise](https://github.com/data-derp/exercise-co2-vs-temperature-production-code) or via [fresh-start](./README.md#fresh-start)
+**NOTE:** In the following, anywhere `awesome-project-awesome-module` (S3 Bucket) are used (project-name: awesome-project, module-name=awesome-module) should be replaced with your own unique name. This name must match the name of the S3 bucket that was previously created in the [previous exercise](https://github.com/data-derp/exercise-co2-vs-temperature-production-code). or via [fresh-start](./README.md#fresh-start)
 
 ## Overview
 1. [Create a Glue Job](#create-a-glue-job)

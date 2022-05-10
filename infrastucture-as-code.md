@@ -1,6 +1,8 @@
 ## Infrastructure as Code (IAC)
 Sometimes clicking through the UI is challenging and prone to mistakes. Use Terraform and custom modules to apply the same changes!
 
+If you're starting fresh, check out [fresh-start](./README.md#fresh-start) before beginning with this exercise.
+
 1. [Setup](#setup)
 2. [Data Ingestion IAC](#data-ingestion-iac)
 3. [Data Transformation IAC](#data-transformation-iac)
@@ -9,8 +11,8 @@ Sometimes clicking through the UI is challenging and prone to mistakes. Use Terr
 
 ## Setup
 1. [Install dependencies](#install-depdenencies)
-2. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
-
+2. Delete all manually created resources from the `data-ingestion` and `data-transformation` sections if you created them (e.g. Glue Job, Crawler, IAM roles)
+3. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
 ### Install Depenencies
 #### Non-Containerised

@@ -6,23 +6,11 @@ We'll be creating a Glue Job to run the Spark (Python) job that we created in an
 **NOTE:** In the following, anywhere `awesome-project-awesome-module` are used (`project-name`: awesome-project, `module-name`=awesome-module) should be replaced with your own unique name. This name must match the name of the S3 bucket that was previously created in the [previous exercise](https://github.com/data-derp/exercise-co2-vs-temperature-production-code) or via [fresh-start](./README.md#fresh-start)
 
 ## Overview
-1. [Upload Data Source files](#upload-data-source)
-2. [Create an IAM Policy](#create-an-iam-policy)
-3. [Create a Role and attach IAM Policy](#create-a-role)
-4. [Create a Glue Job](#create-a-glue-job)
-5. [Create Glue Crawler](#create-a-crawler)
-6. [View Results in Athena](#view-results-in-athena)
-
-## Upload data-source
-The Glue Job that we'll create requires some data to ingest. Upload them to your S3 Bucket. ([Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html))
-
-```bash
-# Pick your own project-name and module-name
-export PROJECT_NAME=awesome-project
-export MODULE_NAME=awesome-module
-
-./go upload-data-source "${PROJECT_NAME}-${MODULE_NAME}"
-```
+1. [Create an IAM Policy](#create-an-iam-policy)
+2. [Create a Role and attach IAM Policy](#create-a-role)
+3. [Create a Glue Job](#create-a-glue-job)
+4. [Create Glue Crawler](#create-a-crawler)
+5. [View Results in Athena](#view-results-in-athena)
 
 ## Create an IAM Policy
 The Glue Job and Crawler that will be created in the next steps require an IAM Role that carry out actions.

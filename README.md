@@ -30,5 +30,5 @@ If you don't have the artifacts in an S3 bucket yet:
 PROJECT_NAME=awesome-project
 MODULE_NAME=awesome-module
 
-./go upload-artifacts "${PROJECT_NAME}-${MODULE_NAME}"
+./go upload-data-source "${PROJECT_NAME}-${MODULE_NAME}"
 ```
