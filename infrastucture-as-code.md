@@ -11,8 +11,9 @@ If you're starting fresh, check out [fresh-start](./README.md#fresh-start) befor
 
 ## Setup
 1. [Install dependencies](#install-depdenencies)
-2. Delete all manually created resources from the `data-ingestion` and `data-transformation` sections if you created them (e.g. Glue Job, Crawler, IAM roles)
-3. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
+2. Ensure that you have an existing S3 bucket, data sources, and artifacts (main.py, .egg). If not check out [fresh-start](./README.md#fresh-start).
+3. Delete all manually created resources from the `data-ingestion` and `data-transformation` sections if you created them in a previous exercise (e.g. Glue Job, Crawler, IAM roles)
+4. [Ensure you have an active AWS CLI Session](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
 ### Install Depenencies
 #### Non-Containerised
@@ -32,7 +33,7 @@ cd iac/data-ingestion
 # Change these variables
 export PROJECT_NAME=awesome-project
 export MODULE_NAME=awesome-module
-export AWS_DEFAULT_REGION=eu-central-1
+export AWS_DEFAULT_REGION=eu-central-1 (or another valid AWS region)
 
 terraform init && terraform apply -var "project-name=${PROJECT_NAME}" -var "module-name=${MODULE_NAME}" -auto-approve
 ```

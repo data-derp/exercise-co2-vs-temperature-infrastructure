@@ -31,4 +31,5 @@ PROJECT_NAME=awesome-project
 MODULE_NAME=awesome-module
 
 ./go upload-data-source "${PROJECT_NAME}-${MODULE_NAME}"
+./go upload-artifacts "${PROJECT_NAME}-${MODULE_NAME}"
 ```
