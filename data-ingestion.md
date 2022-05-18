@@ -80,7 +80,7 @@ Here we'll create a Glue Job that will run our Ingestion code.
     * Type: **Spark**
     * Glue version: **Spark 2.4, Python 3 (Glue Version 2.0)**
     * This job runs **An existing script that you provide**
-    * S3 path where the script is stored: **s3://awesome-project-awesome-module/data-ingestion-artifacts/main.py**
+    * S3 path where the script is stored: **s3://awesome-project-awesome-module/data-ingestion/main.py**
     * Temporary directory: **s3://awesome-project-awesome-module/data-ingestion/temp/**
 4. Under Monitoring Options, select:
    * [x] Job metrics
@@ -90,7 +90,7 @@ Here we'll create a Glue Job that will run our Ingestion code.
    
    ![glue-job-monitoring-options-ingestion.png](./assets/glue-job-monitoring-options-ingestion.png)
 5. Under **Security configuration, script libraries, and job parameters**, select the following configuration:
-    * Python library path: **s3://awesome-project-awesome-module/data-ingestion-artifacts/data_ingestion-0.1-py3.egg**
+    * Python library path: **s3://awesome-project-awesome-module/data-ingestion/data_ingestion-0.1-py3.egg**
     * Number of workers: **2**
     
     ![glue-job-script-libraries-ingestion.png](./assets/glue-job-script-libraries-ingestion.png)
@@ -100,7 +100,7 @@ Here we'll create a Glue Job that will run our Ingestion code.
    | key | value | 
    | --- | --- |
    | --continuous-log-logGroup | awesome-project-awesome-module-data-ingestion/glue|
-   | --extra-py-files | s3://awesome-project-awesome-module/data-ingestion-artifacts/data_ingestion-0.1-py3.egg |
+   | --extra-py-files | s3://awesome-project-awesome-module/data-ingestion/data_ingestion-0.1-py3.egg |
    | --temperatures_country_input_path | s3://awesome-project-awesome-module/data-source/TemperaturesByCountry.csv |
    | --temperatures_country_output_path | s3://awesome-project-awesome-module/data-ingestion/TemperaturesByCountry.parquet |
    | --temperatures_global_input_path | s3://awesome-project-awesome-module/data-source/GlobalTemperatures.csv |

@@ -20,7 +20,7 @@ Here we'll create a Glue Job that will run our Transformation code.
    * Type: **Spark**
    * Glue version: **Spark 2.4, Python 3 (Glue Version 2.0)**
    * This job runs **An existing script that you provide**
-   * S3 path where the script is stored: **s3://awesome-project-awesome-module/data-transformation-artifacts/main.py**
+   * S3 path where the script is stored: **s3://awesome-project-awesome-module/data-transformation/main.py**
    * Temporary directory: **s3://awesome-project-awesome-module/data-transformation/temp/**
 4. Under Monitoring Options, select:
    * [x] Job metrics
@@ -30,7 +30,7 @@ Here we'll create a Glue Job that will run our Transformation code.
 
    ![glue-job-monitoring-options-transformation.png](./assets/glue-job-monitoring-options-transformation.png)
 5. Under **Security configuration, script libraries, and job parameters**, select the following configuration:
-   * Python library path: **s3://awesome-project-awesome-module/data-transformation-artifacts/data_transformation-0.1-py3.egg**
+   * Python library path: **s3://awesome-project-awesome-module/data-transformation/data_transformation-0.1-py3.egg**
    * Number of workers: **2**
 
    ![glue-job-script-libraries-transformation.png](./assets/glue-job-script-libraries-transformation.png)
