@@ -51,7 +51,7 @@ Here we'll create a Glue Job that will run our Transformation code.
 
 6. Click **Next** and **Save job and edit script** and **Save Job**
    ![save-glue-job.png](./assets/save-glue-job.png)
-7. Back in **AWS Glue** > **ETL** > **Jobs**, run the job:
+7. Back in **AWS Glue** > **ETL** > **Jobs (Legacy)**, run the job:
    ![glue-run-job.png](./assets/glue-run-job.png)
 8. Check that the Job has passed in the Job History pane and that you have new files in your S3 Bucket.
 
