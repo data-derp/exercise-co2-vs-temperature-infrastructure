@@ -10,7 +10,7 @@ In this exercise, we'll be creating a second AWS Glue Job to run our Transformat
 
 ## Create a Glue Job
 Here we'll create a Glue Job that will run our Transformation code.
-1. Navigate to the **AWS Console** > **AWS Glue** > **ETL** > **Jobs**
+1. Navigate to the **AWS Console** > **AWS Glue** > **ETL** > **Jobs (Legacy)**
 2. Click **Add job**
    ![add-glue-job.png](./assets/add-glue-job.png)
 
