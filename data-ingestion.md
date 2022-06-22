@@ -70,7 +70,7 @@ Now we'll create an IAM Role that uses that Policy.
 
 ## Create a Glue Job
 Here we'll create a Glue Job that will run our Ingestion code.
-1. Navigate to the **AWS Console** > **AWS Glue** > **ETL** > **Job (Legacy)s**
+1. Navigate to the **AWS Console** > **AWS Glue** > **ETL** > **Job (Legacy)**
 2. Click **Add job**
     ![add-glue-job.png](./assets/add-glue-job.png)
 
