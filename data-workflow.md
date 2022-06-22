@@ -90,7 +90,7 @@ Now that we've created Ingestion and Transformation jobs and associated crawlers
 ## Create a Workflow
 1. Navigate to  **AWS Console** > **Glue** > **ETL** and click on **Workflows**
 2. Click **Add workflow**
-   ![glue-workflow-add.png](./assets/glue-workflow-add)
+   ![glue-workflow-add.png](./assets/glue-workflow-add.png)
 3. Name your workflow
    ![glue-workflow-name.png](./assets/glue-workflow-name.png)
 4. Click **Add workflow**
