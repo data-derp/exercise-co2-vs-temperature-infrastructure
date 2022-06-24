@@ -6,6 +6,9 @@ We'll be creating a Glue Job to run the Spark (Python) job that we created in an
 **NOTE:** In the following, anywhere `awesome-project-awesome-module` are used (`project-name`: awesome-project, `module-name`=awesome-module) should be replaced with your own unique name. This name must match the name of the S3 bucket that was previously created in the [previous exercise](https://github.com/data-derp/exercise-co2-vs-temperature-production-code) or via [fresh-start](./README.md#fresh-start)
 
 ## Overview
+
+Tip 💡: use [bookmarks](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/add-remove-shortcut.html) to quickly navigate between AWS services.
+
 1. [Create an IAM Policy](#create-an-iam-policy)
 2. [Create a Role and attach IAM Policy](#create-a-role)
 3. [Create a Glue Job](#create-a-glue-job)
