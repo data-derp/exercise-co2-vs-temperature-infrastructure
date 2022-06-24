@@ -42,7 +42,7 @@ Here we'll create a Glue Job that will run our Transformation code.
    | --co2_input_path | s3://awesome-project-awesome-module/data-ingestion/EmissionsByCountry.parquet/ |
    | --temperatures_global_input_path | s3://awesome-project-awesome-module/data-ingestion/GlobalTemperatures.parquet/ |
    | --temperatures_country_input_path | s3://awesome-project-awesome-module/data-ingestion/TemperaturesByCountry.parquet/ |
-   | --co2_temperatures_global_output_path | s3://$awesome-project-awesome-module/data-transformation/GlobalEmissionsVsTemperatures.parquet/ |
+   | --co2_temperatures_global_output_path | s3://awesome-project-awesome-module/data-transformation/GlobalEmissionsVsTemperatures.parquet/ |
    | --co2_temperatures_country_output_path | s3://awesome-project-awesome-module/data-transformation/CountryEmissionsVsTemperatures.parquet/ |
    | --europe_big_3_co2_output_path | s3://awesome-project-awesome-module/data-transformation/EuropeBigThreeEmissions.parquet/ |
    | --co2_oceania_output_path | s3://awesome-project-awesome-module/data-transformation/OceaniaEmissionsEdited.parquet/ |
