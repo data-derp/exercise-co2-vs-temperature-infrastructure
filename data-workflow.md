@@ -36,11 +36,13 @@ Now that we've created Ingestion and Transformation jobs and associated crawlers
    ```bash
    UPSTREAM_JOB_NAME=awesome-project-awesome-module-data-ingestion
    CRAWLER_NAME=awesome-project-awesome-module-data-ingestion
+   REGION=your-region
    aws glue create-trigger --name awesome-project-awesome-module-data-ingestion-crawler-trigger \
     --type CONDITIONAL \
     --predicate "Logical=ANY,Conditions=[{LogicalOperator=EQUALS,JobName=${UPSTREAM_JOB_NAME},State=SUCCEEDED}]" \
     --actions CrawlerName=${CRAWLER_NAME} \
-    --no-start-on-creation
+    --no-start-on-creation \
+    --region $REGION
    ```
    Success Response:
    ```json
@@ -56,11 +58,13 @@ Now that we've created Ingestion and Transformation jobs and associated crawlers
    ```bash
    UPSTREAM=awesome-project-awesome-module-data-ingestion
    DOWNSTREAM=awesome-project-awesome-module-data-transformation
+   REGION=your-region
    aws glue create-trigger --name awesome-project-awesome-module-transformation-trigger \
     --type CONDITIONAL \
     --predicate "Logical=ANY,Conditions=[{LogicalOperator=EQUALS,CrawlerName=${UPSTREAM},CrawlState=SUCCEEDED}]" \
     --actions JobName=${DOWNSTREAM} \
-    --no-start-on-creation
+    --no-start-on-creation \
+    --region $REGION
    ```
    Success Response:
    ```json
@@ -75,11 +79,13 @@ Now that we've created Ingestion and Transformation jobs and associated crawlers
    ```bash
    UPSTREAM=awesome-project-awesome-module-data-transformation
    DOWNSTREAM=awesome-project-awesome-module-data-transformation
+   REGION=your-region
    aws glue create-trigger --name awesome-project-awesome-module-data-transformation-crawler-trigger \
     --type CONDITIONAL \
     --predicate "Logical=ANY,Conditions=[{LogicalOperator=EQUALS,JobName=${UPSTREAM},State=SUCCEEDED}]" \
     --actions CrawlerName=${DOWNSTREAM} \
-    --no-start-on-creation
+    --no-start-on-creation \
+    --region $REGION
    ```
    Success Response:
    ```json
